@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Nov  2 15:17:58 2021
+# Make data base, printed on Tue Nov  2 19:39:35 2021
 
 # Variables
 
@@ -38,7 +38,7 @@ VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 _ = /home/dvir/.vscode-server/bin/6cba118ac49a1b88332f312a8f67186f7f3c1643/node
 # makefile (from 'makefile', line 1)
 MAKEFILE_LIST :=  makefile
-# makefile (from 'makefile', line 4)
+# makefile (from 'makefile', line 5)
 recFails = basicClassification.o advancedClassificationRecursion.o
 # 'override' directive
 GNUMAKEFLAGS := 
@@ -54,12 +54,12 @@ VSCODE_CWD = /mnt/c/Users/dvir_/AppData/Local/Programs/Microsoft VS Code
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
 PATH = /home/dvir/.vscode-server/bin/6cba118ac49a1b88332f312a8f67186f7f3c1643/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/dvir_/AppData/Local/Programs/AdoptOpenJDK/jdk-11.0.10.9-hotspot/bin:/mnt/c/Users/dvir_/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/dvir_/.dotnet/tools:/mnt/c/MinGW/bin:/mnt/c/Users/dvir_/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
-# makefile (from 'makefile', line 2)
+# makefile (from 'makefile', line 3)
 AR = ar
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-965baa0f-c602-4edf-b3de-ba3a4b46f038.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-a866e253-ab67-439b-8f86-60b20352d031.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -94,7 +94,7 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 0
-# makefile (from 'makefile', line 1)
+# makefile (from 'makefile', line 2)
 CC = gcc
 # default
 MAKE_VERSION := 4.2.1
@@ -114,7 +114,7 @@ MAKE_COMMAND := make
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
-# makefile (from 'makefile', line 3)
+# makefile (from 'makefile', line 4)
 loopFails = basicClassification.o advancedClassificationLoop.o
 # makefile
 MAKEFLAGS = pqrR
@@ -138,7 +138,7 @@ HOSTTYPE = x86_64
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# makefile (from 'makefile', line 5)
+# makefile (from 'makefile', line 6)
 FLAGS = -Wall -g
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
@@ -163,9 +163,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2, inode 281474977919093): 26 files, no impossibilities.
+# . (device 2, inode 281474977919093): 15 files, no impossibilities.
 
-# 26 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -180,10 +180,11 @@ libclassrec.a:
 #  File has not been updated.
 
 loops: basicClassification.o advancedClassificationLoop.o
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 14):
+#  recipe to execute (from 'makefile', line 15):
 	$(AR) -rcs libclassloops.a $(loopFails)
 
 all: recursived loopd recursives loops mains maindloop maindrec
@@ -195,6 +196,11 @@ all: recursived loopd recursives loops mains maindloop maindrec
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
+.PHONY: loops recursived clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 # Not a target:
 main.c:
 #  Implicit rule search has not been done.
@@ -202,30 +208,14 @@ main.c:
 #  File has not been updated.
 
 recursived: basicClassification.o advancedClassificationRecursion.o
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# automatic
-# @ := recursived
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := basicClassification.o advancedClassificationRecursion.o
-# automatic
-# | := 
-# automatic
-# < := basicClassification.o
-# automatic
-# ^ := basicClassification.o advancedClassificationRecursion.o
-# automatic
-# ? := basicClassification.o advancedClassificationRecursion.o
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
-#  recipe to execute (from 'makefile', line 20):
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+#  recipe to execute (from 'makefile', line 21):
 	$(CC) -shared -o libclassrec.so $(recFails) -lm
 
 # Not a target:
@@ -238,7 +228,7 @@ maindrec: main.o libclassrec.so
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 12):
+#  recipe to execute (from 'makefile', line 13):
 	$(CC) $(FLAGS)  -o maindrec main.o ./libclassrec.so -lm
 
 # Not a target:
@@ -256,7 +246,7 @@ advancedClassificationLoop.c:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-11-02 10:05:53.9863704
+#  Last modified 2021-11-02 15:26:10.900483
 #  File has been updated.
 #  Successfully updated.
 
@@ -264,7 +254,7 @@ recursives: basicClassification.o advancedClassificationRecursion.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 16):
+#  recipe to execute (from 'makefile', line 17):
 	$(AR) -rcs libclassrec.a $(recFails)
 
 # Not a target:
@@ -281,38 +271,57 @@ libclassloops.so:
 
 # Not a target:
 advancedClassificationRecursion.o:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-02 15:17:14.5508275
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 basicClassification.o: basicClassification.c NumClass.h
 #  Implicit rule search has not been done.
-#  Last modified 2021-11-02 15:17:14.4650706
+#  Implicit/static pattern stem: ''
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
-#  recipe to execute (from 'makefile', line 22):
+#  Needs to be updated (-q is set).
+# automatic
+# @ := basicClassification.o
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := basicClassification.c NumClass.h
+# automatic
+# | := 
+# automatic
+# < := basicClassification.c
+# automatic
+# ^ := basicClassification.c NumClass.h
+# automatic
+# ? := basicClassification.c NumClass.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
+#  recipe to execute (from 'makefile', line 23):
 	$(CC) $(FLAGS) -c basicClassification.c -lm
 
 maindloop: main.o libclassloops.so
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 10):
+#  recipe to execute (from 'makefile', line 11):
 	$(CC) $(FLAGS)  -o maindloop main.o ./libclassloops.so -lm
 
 clean:
+#  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 30):
+#  recipe to execute (from 'makefile', line 29):
 	rm -f *.o *.a *.so maindloop maindrec mains
 
 mains: main.o libclassrec.a
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 8):
+#  recipe to execute (from 'makefile', line 9):
 	$(CC) $(FLAGS)  -o mains main.o libclassrec.a -lm
 
 # Not a target:
@@ -326,14 +335,14 @@ main.o: main.c NumClass.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 26):
+#  recipe to execute (from 'makefile', line 27):
 	$(CC) $(FLAGS) -c main.c
 
 loopd: basicClassification.o advancedClassificationLoop.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 18):
+#  recipe to execute (from 'makefile', line 19):
 	$(CC) -shared -o libclassloops.so $(loopFails) -lm 
 
 # Not a target:
@@ -347,23 +356,23 @@ advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 24):
+#  recipe to execute (from 'makefile', line 25):
 	$(CC) $(FLAGS) -c advancedClassificationLoop.c -lm
 
 # files hash-table stats:
-# Load=23/1024=2%, Rehash=0, Collisions=0/72=0%
+# Load=24/1024=2%, Rehash=0, Collisions=0/77=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 36 / storage = 461 B / avg = 12 B
-# current buf: size = 8162 B / used = 461 B / count = 36 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 452 B / avg = 12 B
+# current buf: size = 8162 B / used = 452 B / count = 36 / avg = 12 B
 
-# strcache performance: lookups = 87 / hit rate = 58%
+# strcache performance: lookups = 81 / hit rate = 55%
 # hash-table stats:
-# Load=36/8192=0%, Rehash=0, Collisions=1/87=1%
-# Finished Make data base on Tue Nov  2 15:17:58 2021
+# Load=36/8192=0%, Rehash=0, Collisions=1/81=1%
+# Finished Make data base on Tue Nov  2 19:39:35 2021
 
  
