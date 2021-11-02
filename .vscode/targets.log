@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Nov  2 14:20:09 2021
+# Make data base, printed on Tue Nov  2 15:17:58 2021
 
 # Variables
 
@@ -59,7 +59,7 @@ AR = ar
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-cc7a3ec5-025d-4d0b-8a0e-0d48d9b6bb0d.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-965baa0f-c602-4edf-b3de-ba3a4b46f038.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -163,9 +163,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2, inode 281474977919093): 15 files, no impossibilities.
+# . (device 2, inode 281474977919093): 26 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 26 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -203,11 +203,28 @@ main.c:
 
 recursived: basicClassification.o advancedClassificationRecursion.o
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+# automatic
+# @ := recursived
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := basicClassification.o advancedClassificationRecursion.o
+# automatic
+# | := 
+# automatic
+# < := basicClassification.o
+# automatic
+# ^ := basicClassification.o advancedClassificationRecursion.o
+# automatic
+# ? := basicClassification.o advancedClassificationRecursion.o
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
+# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
 #  recipe to execute (from 'makefile', line 20):
 	$(CC) -shared -o libclassrec.so $(recFails) -lm
 
@@ -264,34 +281,16 @@ libclassloops.so:
 
 # Not a target:
 advancedClassificationRecursion.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2021-11-02 15:17:14.5508275
+#  File has been updated.
+#  Successfully updated.
 
 basicClassification.o: basicClassification.c NumClass.h
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
-#  File does not exist.
+#  Last modified 2021-11-02 15:17:14.4650706
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := basicClassification.o
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := basicClassification.c NumClass.h
-# automatic
-# | := 
-# automatic
-# < := basicClassification.c
-# automatic
-# ^ := basicClassification.c NumClass.h
-# automatic
-# ? := basicClassification.c NumClass.h
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
+#  Successfully updated.
 #  recipe to execute (from 'makefile', line 22):
 	$(CC) $(FLAGS) -c basicClassification.c -lm
 
@@ -359,12 +358,12 @@ advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 445 B / avg = 12 B
-# current buf: size = 8162 B / used = 445 B / count = 35 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 36 / storage = 461 B / avg = 12 B
+# current buf: size = 8162 B / used = 461 B / count = 36 / avg = 12 B
 
-# strcache performance: lookups = 76 / hit rate = 53%
+# strcache performance: lookups = 87 / hit rate = 58%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=1/76=1%
-# Finished Make data base on Tue Nov  2 14:20:09 2021
+# Load=36/8192=0%, Rehash=0, Collisions=1/87=1%
+# Finished Make data base on Tue Nov  2 15:17:58 2021
 
  

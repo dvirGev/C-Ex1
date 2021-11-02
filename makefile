@@ -1,3 +1,4 @@
+.PHONY: loops recursived clean
 CC = gcc
 AR = ar
 loopFails = basicClassification.o advancedClassificationLoop.o
@@ -24,7 +25,5 @@ advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 	$(CC) $(FLAGS) -c advancedClassificationLoop.c -lm
 main.o: main.c NumClass.h
 	$(CC) $(FLAGS) -c main.c
- 
-
 clean:
 	rm -f *.o *.a *.so maindloop maindrec mains
