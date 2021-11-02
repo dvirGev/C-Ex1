@@ -12,7 +12,6 @@ int factorial(int n) {
 }
 int isStrong(int n) {
     int x = n;
-    int numberOfDifit = (int)log10(n) + 1;
     int sum = 0;
     while (x > 0)
     {

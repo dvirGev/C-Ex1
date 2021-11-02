@@ -1,4 +1,3 @@
-.PHONY = all clean all
 CC = gcc
 AR = ar
 loopFails = basicClassification.o advancedClassificationLoop.o
