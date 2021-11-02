@@ -1,0 +1,16 @@
+make all --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/dvir/Ex1'
+gcc -Wall -g -c basicClassification.c -lm
+gcc    -c -o advancedClassificationRecursion.o advancedClassificationRecursion.c
+gcc -shared -o libclassrec.so basicClassification.o advancedClassificationRecursion.o -lm
+gcc -Wall -g -c advancedClassificationLoop.c -lm
+gcc -shared -o libclassloops.so basicClassification.o advancedClassificationLoop.o -lm 
+ar -rcs libclassrec.a basicClassification.o advancedClassificationRecursion.o
+ar -rcs libclassloops.a basicClassification.o advancedClassificationLoop.o
+gcc -Wall -g -c main.c
+make: Leaving directory '/home/dvir/Ex1'
+ 
+make: *** No rule to make target 'libclassrec.a', needed by 'mains'.
+make: *** No rule to make target 'libclassloops.so', needed by 'maindloop'.
+make: *** No rule to make target 'libclassrec.so', needed by 'maindrec'.
+ 
