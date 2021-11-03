@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Nov  3 10:29:31 2021
+# Make data base, printed on Wed Nov  3 16:53:13 2021
 
 # Variables
 
@@ -59,7 +59,7 @@ AR = ar
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-fc006eb2-76ab-489f-b02c-1f2bb328fc24.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-18edcb68-5e69-4675-b6cf-523839c61ff5.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -107,7 +107,7 @@ NAME = DvirsLeptop
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # environment
-VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/dvir_/.vscode/extensions/ms-vscode-remote.remote-wsl-0.58.4
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/dvir_/.vscode/extensions/ms-vscode-remote.remote-wsl-0.58.5
 # default
 MAKE_COMMAND := make
 # default
@@ -154,10 +154,8 @@ TERM = xterm-256color
 VSCODE_EXTHOST_WILL_SEND_SOCKET = true
 # environment
 WSL_DISTRO_NAME = Ubuntu
-# environment
-MOTD_SHOWN = update-motd
 # variable set hash-table stats:
-# Load=73/1024=7%, Rehash=0, Collisions=4/107=4%
+# Load=72/1024=7%, Rehash=0, Collisions=4/106=4%
 
 # Pattern-specific Variable Values
 
@@ -165,9 +163,9 @@ MOTD_SHOWN = update-motd
 
 # Directories
 
-# . (device 2, inode 281474977919093): 27 files, no impossibilities.
+# . (device 2, inode 281474977919093): 17 files, no impossibilities.
 
-# 27 files, no impossibilities in 1 directories.
+# 17 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -207,28 +205,11 @@ main.c:
 recursived: basicClassification.o advancedClassificationRecursion.o
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
-# automatic
-# @ := recursived
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := basicClassification.o advancedClassificationRecursion.o
-# automatic
-# | := 
-# automatic
-# < := basicClassification.o
-# automatic
-# ^ := basicClassification.o advancedClassificationRecursion.o
-# automatic
-# ? := basicClassification.o advancedClassificationRecursion.o
 # variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from 'makefile', line 21):
 	$(CC) -shared -o libclassrec.so $(recFails) -lm
 
@@ -275,16 +256,34 @@ recursives: basicClassification.o advancedClassificationRecursion.o
 
 # Not a target:
 advancedClassificationRecursion.o:
-#  Implicit rule search has been done.
-#  Last modified 2021-11-03 10:26:30.6544316
-#  File has been updated.
-#  Successfully updated.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 basicClassification.o: basicClassification.c NumClass.h
 #  Implicit rule search has not been done.
-#  Last modified 2021-11-03 10:26:30.6099183
+#  Implicit/static pattern stem: ''
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := basicClassification.o
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := basicClassification.c NumClass.h
+# automatic
+# | := 
+# automatic
+# < := basicClassification.c
+# automatic
+# ^ := basicClassification.c NumClass.h
+# automatic
+# ? := basicClassification.c NumClass.h
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
 #  recipe to execute (from 'makefile', line 23):
 	$(CC) $(FLAGS) -c basicClassification.c -lm
 
@@ -356,12 +355,12 @@ advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 38 / storage = 479 B / avg = 12 B
-# current buf: size = 8162 B / used = 479 B / count = 38 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 35 / storage = 423 B / avg = 12 B
+# current buf: size = 8162 B / used = 423 B / count = 35 / avg = 12 B
 
-# strcache performance: lookups = 101 / hit rate = 62%
+# strcache performance: lookups = 91 / hit rate = 61%
 # hash-table stats:
-# Load=38/8192=0%, Rehash=0, Collisions=1/101=1%
-# Finished Make data base on Wed Nov  3 10:29:31 2021
+# Load=35/8192=0%, Rehash=0, Collisions=1/91=1%
+# Finished Make data base on Wed Nov  3 16:53:13 2021
 
  
