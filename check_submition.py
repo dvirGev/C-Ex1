@@ -87,9 +87,9 @@ def main():
     test_extra_compilation("maindrec")
     
 
-    test_output_vs_expected("mainsloop" , "../inputs/input1.txt" , "../outputs/output1.txt")
+    test_output_vs_expected("mains" , "../inputs/input1.txt" , "../outputs/output1.txt")
     test_output_vs_expected("maindloop" , "../inputs/input2.txt" , "../outputs/output2.txt")
-    test_output_vs_expected("mainsrec" , "../inputs/input3.txt" , "../outputs/output3.txt")
+    test_output_vs_expected("maindrec" , "../inputs/input3.txt" , "../outputs/output3.txt")
     test_output_vs_expected("maindrec" , "../inputs/input4.txt" , "../outputs/output4.txt")
 
     if passed == 1:
