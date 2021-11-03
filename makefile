@@ -1,15 +1,15 @@
-.PHONY: all loops recursived clean
+.PHONY: all recursived loopd recursives loops mains maindloop maindrec loops recursived clean
 CC = gcc
 AR = ar
 loopFails = basicClassification.o advancedClassificationLoop.o
 recFails = basicClassification.o advancedClassificationRecursion.o
 FLAGS= -Wall -g
 all: recursived loopd recursives loops mains maindloop maindrec
-mains: main.o libclassrec.a
+mains: main.o recursives
 	$(CC) $(FLAGS)  -o mains main.o libclassrec.a -lm
-maindloop: main.o libclassloops.so 
+maindloop: main.o loopd
 	$(CC) $(FLAGS)  -o maindloop main.o ./libclassloops.so -lm
-maindrec: main.o libclassrec.so 
+maindrec: main.o recursived 
 	$(CC) $(FLAGS)  -o maindrec main.o ./libclassrec.so -lm
 loops: $(loopFails)
 	$(AR) -rcs libclassloops.a $(loopFails)
