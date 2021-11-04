@@ -1,4 +1,4 @@
-.PHONY: all clean
+.PHONY: all loops loopd recursives recursived clean
 CC = gcc
 AR = ar
 loopFails = basicClassification.o advancedClassificationLoop.o
