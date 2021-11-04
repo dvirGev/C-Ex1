@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Nov  3 16:53:13 2021
+# Make data base, printed on Thu Nov  4 17:00:01 2021
 
 # Variables
 
@@ -59,7 +59,7 @@ AR = ar
 # environment
 VSCODE_LOG_STACK = false
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-18edcb68-5e69-4675-b6cf-523839c61ff5.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-ed28f347-5255-4029-af16-99cc2540a767.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -163,9 +163,9 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Directories
 
-# . (device 2, inode 281474977919093): 17 files, no impossibilities.
+# . (device 2, inode 281474977919093): 16 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 16 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -173,15 +173,19 @@ WSL_DISTRO_NAME = Ubuntu
 
 # Files
 
-loops: basicClassification.o advancedClassificationLoop.o
-#  Phony target (prerequisite of .PHONY).
+libclassrec.a: basicClassification.o advancedClassificationRecursion.o
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 15):
-	$(AR) -rcs libclassloops.a $(loopFails)
+#  recipe to execute (from 'makefile', line 23):
+	$(AR) -rcs libclassrec.a $(recFails)
 
-all: recursived loopd recursives loops mains maindloop maindrec
+loops: libclassloops.a
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+all: libclassloops.a libclassrec.a libclassloops.so libclassrec.so mains maindloop maindrec
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
 #  Implicit rule search has not been done.
@@ -191,7 +195,7 @@ all: recursived loopd recursives loops mains maindloop maindrec
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 
-.PHONY: all recursived loopd recursives loops mains maindloop maindrec loops recursived clean
+.PHONY: all clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -202,8 +206,7 @@ main.c:
 #  Modification time never checked.
 #  File has not been updated.
 
-recursived: basicClassification.o advancedClassificationRecursion.o
-#  Phony target (prerequisite of .PHONY).
+libclassloops.a: basicClassification.o advancedClassificationLoop.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has been updated.
@@ -211,7 +214,12 @@ recursived: basicClassification.o advancedClassificationRecursion.o
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from 'makefile', line 21):
-	$(CC) -shared -o libclassrec.so $(recFails) -lm
+	$(AR) -rcs libclassloops.a $(loopFails)
+
+recursived: libclassrec.so
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .SUFFIXES:
@@ -219,13 +227,19 @@ recursived: basicClassification.o advancedClassificationRecursion.o
 #  Modification time never checked.
 #  File has not been updated.
 
-maindrec: main.o recursived
-#  Phony target (prerequisite of .PHONY).
+maindrec: main.o libclassrec.so
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 13):
+#  recipe to execute (from 'makefile', line 19):
 	$(CC) $(FLAGS)  -o maindrec main.o ./libclassrec.so -lm
+
+libclassrec.so: basicClassification.o advancedClassificationRecursion.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 27):
+	$(CC) -shared -o libclassrec.so $(recFails) -lm
 
 # Not a target:
 advancedClassificationLoop.c:
@@ -236,17 +250,21 @@ advancedClassificationLoop.c:
 # Not a target:
 makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-11-03 10:26:36.3648533
+#  Last modified 2021-11-03 17:04:15.7168704
 #  File has been updated.
 #  Successfully updated.
 
-recursives: basicClassification.o advancedClassificationRecursion.o
-#  Phony target (prerequisite of .PHONY).
+recursives: libclassrec.a
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 17):
-	$(AR) -rcs libclassrec.a $(recFails)
+
+libclassloops.so: basicClassification.o advancedClassificationLoop.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 25):
+	$(CC) -shared -o libclassloops.so $(loopFails) -lm 
 
 # Not a target:
 .DEFAULT:
@@ -284,15 +302,14 @@ basicClassification.o: basicClassification.c NumClass.h
 # ? := basicClassification.c NumClass.h
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/13=8%
-#  recipe to execute (from 'makefile', line 23):
+#  recipe to execute (from 'makefile', line 29):
 	$(CC) $(FLAGS) -c basicClassification.c -lm
 
-maindloop: main.o loopd
-#  Phony target (prerequisite of .PHONY).
+maindloop: main.o libclassloops.so
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 11):
+#  recipe to execute (from 'makefile', line 17):
 	$(CC) $(FLAGS)  -o maindloop main.o ./libclassloops.so -lm
 
 clean:
@@ -300,15 +317,14 @@ clean:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 29):
+#  recipe to execute (from 'makefile', line 35):
 	rm -f *.o *.a *.so maindloop maindrec mains
 
-mains: main.o recursives
-#  Phony target (prerequisite of .PHONY).
+mains: main.o libclassrec.a
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 9):
+#  recipe to execute (from 'makefile', line 15):
 	$(CC) $(FLAGS)  -o mains main.o libclassrec.a -lm
 
 # Not a target:
@@ -322,16 +338,13 @@ main.o: main.c NumClass.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 27):
+#  recipe to execute (from 'makefile', line 33):
 	$(CC) $(FLAGS) -c main.c
 
-loopd: basicClassification.o advancedClassificationLoop.o
-#  Phony target (prerequisite of .PHONY).
+loopd: libclassloops.so
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 19):
-	$(CC) -shared -o libclassloops.so $(loopFails) -lm 
 
 # Not a target:
 basicClassification.c:
@@ -344,23 +357,23 @@ advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'makefile', line 25):
+#  recipe to execute (from 'makefile', line 31):
 	$(CC) $(FLAGS) -c advancedClassificationLoop.c -lm
 
 # files hash-table stats:
-# Load=21/1024=2%, Rehash=0, Collisions=0/82=0%
+# Load=25/1024=2%, Rehash=0, Collisions=0/81=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 35 / storage = 423 B / avg = 12 B
-# current buf: size = 8162 B / used = 423 B / count = 35 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 38 / storage = 476 B / avg = 12 B
+# current buf: size = 8162 B / used = 476 B / count = 38 / avg = 12 B
 
-# strcache performance: lookups = 91 / hit rate = 61%
+# strcache performance: lookups = 93 / hit rate = 59%
 # hash-table stats:
-# Load=35/8192=0%, Rehash=0, Collisions=1/91=1%
-# Finished Make data base on Wed Nov  3 16:53:13 2021
+# Load=38/8192=0%, Rehash=0, Collisions=1/93=1%
+# Finished Make data base on Thu Nov  4 17:00:01 2021
 
  

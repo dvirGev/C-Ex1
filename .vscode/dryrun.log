@@ -1,12 +1,12 @@
 make all --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/dvir/Ex1'
 gcc -Wall -g -c basicClassification.c -lm
-gcc    -c -o advancedClassificationRecursion.o advancedClassificationRecursion.c
-gcc -shared -o libclassrec.so basicClassification.o advancedClassificationRecursion.o -lm
 gcc -Wall -g -c advancedClassificationLoop.c -lm
-gcc -shared -o libclassloops.so basicClassification.o advancedClassificationLoop.o -lm 
-ar -rcs libclassrec.a basicClassification.o advancedClassificationRecursion.o
 ar -rcs libclassloops.a basicClassification.o advancedClassificationLoop.o
+gcc    -c -o advancedClassificationRecursion.o advancedClassificationRecursion.c
+ar -rcs libclassrec.a basicClassification.o advancedClassificationRecursion.o
+gcc -shared -o libclassloops.so basicClassification.o advancedClassificationLoop.o -lm 
+gcc -shared -o libclassrec.so basicClassification.o advancedClassificationRecursion.o -lm
 gcc -Wall -g -c main.c
 gcc -Wall -g  -o mains main.o libclassrec.a -lm
 gcc -Wall -g  -o maindloop main.o ./libclassloops.so -lm
